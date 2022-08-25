@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Page</title>
+    <style>
+        #back{
+            background-color: #151515;
+            width: 99vw;
+            height: 50px;
+            display: flex;
+        }
+        #back>div:first-child{
+            border: 1px solid transparent;
+            width: 400px;
+            margin-left: 150px;
+            height: 48px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #back>div:first-child>div:last-child{
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #back i{
+            margin-right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        #back>div:nth-child(2){
+            margin-left: 750px;
+            margin-top: -10px;
+        }
+        #back a{
+            color:grey;
+            text-decoration: none;
+        }
+        div+h1{
+            max-width: 100%;
+            text-align: center;
+            margin:20px auto;
+            position: relative;
+            font-size: 30px;
+            color:grey;
+        }
+        h1:before{
+            position: absolute;
+            width:180px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            left: 490px;
+        }
+        h1::after{
+            position: absolute;
+            width:180px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:51%;
+            right: 490px;
+        }
+        #pics{
+            border: 1px solid transparent;
+            width: 600px;
+            height: 50px;
+            margin: auto;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            justify-content: space-between;
+            gap:20px;
+        }
+        #pics>div{
+            border:1px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #pics i{
+            margin-right: 20px;
+            font-size: 30px;
+            margin-left: -30px;
+        }
+        .font{
+            font-size: 20px;
+        }
+        #pics>div:first-child{
+            background-color: #1daee3;
+            color:white;
+        }
+        #pics>div:nth-child(2){
+            background-color: #3b5998;
+            color:white;
+        }
+        #pics>div:nth-child(3){
+            background-color:#f1f1f1 ;
+            color:black;
+        }
+        #pics img{
+            margin-right: 10px;
+            margin-left: -20px;
+        }
+        form{
+            width: 40%;
+            margin: auto;
+            border: 1px solid transparent;
+        }
+        form input:first-child{
+            padding:10px 180px 10px 20px;
+            margin-left: 150px;
+            font-size: 15px;
+        }
+        form input:last-child{
+            padding:10px 70px;
+            margin: 20px 0 0 250px;
+            background:linear-gradient(to right, #4d7909, #095e79);
+            border-color: transparent;
+            border-radius: 10px;
+            color:white;
+            cursor: pointer;
+        }
+        #last_content{
+            border: 1px solid transparent;
+            width: 38%;
+            margin:50px auto;
+            height: 60px;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+        #last_content>div{
+            border: 1px solid transparent;
+            margin-right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 60%;
+            margin-top: 15px;
+        }
+        #last_content>div:first-child{
+            margin-right:15px;
+            margin-left: 100px;
+            border: none;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #last_content img{
+            width: 60px;
+        }
+        #last_content>div:last-child img{
+            width: 40px;
+            padding-left:10px;
+            padding-right:10px ;
+        }
+    </style>
+     <script src="https://kit.fontawesome.com/3c047ac03a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="back">
+        <div>
+            <div>
+               <a href="navbar.html"><i class="fa-solid fa-arrow-left"></i></a> 
+            </div>
+            <div>
+              <a href="navbar.html">  Back to India Today</a>
+            </div>
+        </div>
+        <div>
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="">
+        </div>
+    </div>
+    
+    <div id="pics">
+        <div>
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="font">Twitter</div>
+        </div>
+        <div>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="font">Facebook</div>
+        </div>
+        <div>
+            <div>
+                <img src="https://sso.masaischool.com/google.svg" alt="">
+            </div>
+            <div class="font">Google</div>
+        </div>
+    </div>
+    <h1>OTP Confirmation</h1>
+    <form action="" autocomplete="off">
+        <input type="number" name="" id="otp" required placeholder="Enter OTP Here">
+        <input type="submit" value="VERIFY">
+    </form>
+    <div id="last_content">
+        <div>
+            One Network One Account
+        </div>
+        <div>
+            <img src="https://smedia2.intoday.in/aajtak/aajtakhd/images/aajtakHd_logo.png?bypass=true" alt="">
+        </div>
+        <div>
+            <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?576" alt="">
+        </div>
+        <div>
+            <img src="https://akm-img-a-in.tosshub.com/sites/btmt/businesstoday/resources/css/images/btnav-newlogo.png?size=48:21" alt="">
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",myFunction)
+
+    function myFunction(){
+        event.preventDefault()
+        let x = document.querySelector("#otp").value;
+
+        if(x === "1234"){
+            alert("Registration Successfull")
+            window.location.href="login.html"
+        }else{
+            alert("Enter Correct OTP")
+        }
+    }
+</script>

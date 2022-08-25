@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        #back{
+            background-color: #151515;
+            width: 99vw;
+            height: 50px;
+            display: flex;
+        }
+        #back>div:first-child{
+            border: 1px solid transparent;
+            width: 400px;
+            margin-left: 150px;
+            height: 48px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #back>div:first-child>div:last-child{
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #back i{
+            margin-right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        #back>div:nth-child(2){
+            margin-left: 750px;
+            margin-top: -10px;
+        }
+        #login h1:first-child{
+            width: 100%;
+            text-align: center;
+        }
+        #login p+h4{
+            max-width: 100%;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            font-size: 20px;
+            color:grey;
+        }
+        #login a{
+            color:red;
+        }
+        #back a{
+            color:grey;
+            text-decoration: none;
+        }
+        h4:before{
+            position: absolute;
+            width:250px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            left: 490px;
+        }
+        h4::after{
+            position: absolute;
+            width:250px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            right: 490px;
+        }
+        h1+p{
+            width: 100%;
+            text-align: center;
+            margin-top: 0;
+            color:gray;
+        }
+        #pics{
+            border: 1px solid transparent;
+            width: 600px;
+            height: 50px;
+            margin:10px auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            justify-content: space-between;
+            gap:20px;
+        }
+        #pics>div{
+            border:1px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #pics i{
+            margin-right: 20px;
+            font-size: 30px;
+            margin-left: -30px;
+        }
+        .font{
+            font-size: 20px;
+        }
+        #pics>div:first-child{
+            background-color: #1daee3;
+            color:white;
+        }
+        #pics>div:nth-child(2){
+            background-color: #3b5998;
+            color:white;
+        }
+        #pics>div:nth-child(3){
+            background-color:#f1f1f1 ;
+            color:black;
+        }
+        #pics img{
+            margin-right: 10px;
+            margin-left: -20px;
+        }
+        h3{
+            max-width: 100%;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            font-size: 20px;
+            color:grey;
+        }
+        h3:before{
+            position: absolute;
+            width:120px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            left: 490px;
+        }
+        h3::after{
+            position: absolute;
+            width:120px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            right: 490px;
+        }
+        #input{
+            border: 1px solid transparent;
+            width: 40%;
+            margin: auto;
+            height: auto;
+        }
+        #input>div:first-child{
+            border: 1px solid grey;
+            height: 50px;
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+        }
+        #input i{
+            font-size: 30px;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 15px;
+            color:gray;
+        }
+        #input input{
+            padding:5px 300px 5px 10px;
+            font-size: 15px;
+            border: none;
+            border-left: 2px solid grey;
+        }
+        #input>div:nth-child(2){
+            border: 1px solid grey;
+            height: 50px;
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+        }
+        .check{
+            display: flex;
+            margin-left: 470px;
+        }
+        .check p{
+            margin-left: 5px;
+        }
+        #forgot{
+            width: 40%;
+            margin: auto;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }   
+        #forgot>div{
+            border: 1px solid transparent;
+            width: 120px;
+            font-size: 15px;
+            color:teal;
+            font-weight: bold ;
+            cursor: pointer;
+        }
+        #forgot>div:nth-child(2){
+            display: flex;
+            justify-content: end;
+        }
+        button{
+            padding: 8px 70px;
+            margin-left: 700px;
+            background-color:#1d61cc; 
+            color: white;
+            margin-top: 20px;
+            border-color: teal;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #last_content{
+            border: 1px solid transparent;
+            width: 40%;
+            margin:30px auto;
+            height: 60px;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+        #last_content>div{
+            border: 1px solid transparent;
+            margin-right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 60%;
+            margin-top: 15px;
+        }
+        #last_content>div:first-child{
+            margin-right:15px;
+            margin-left: 100px;
+            border: none;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #last_content img{
+            width: 60px;
+        }
+        #last_content>div:last-child img{
+            width: 40px;
+            padding-left:10px;
+            padding-right:10px ;
+        }
+        #lastpara{
+            width: 99vw;
+            background-color: #151515;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #lastpara p{
+            color: white;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/3c047ac03a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="back">
+        <div>
+            <div>
+               <a href="navbar.html"><i class="fa-solid fa-arrow-left"></i></a> 
+            </div>
+            <div>
+              <a href="navbar.html">  Back to India Today</a>
+            </div>
+        </div>
+        <div>
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="">
+        </div>
+    </div>
+
+    <div id="login">
+        <h1>Sign In to India Today</h1>
+        <p>Don't have an account? <a href="signup.html">Sign up Now*</a></p>
+        <h4>Sign In via</h4>
+        <div id="pics">
+            <div>
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="font">Twitter</div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="font">Facebook</div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://sso.masaischool.com/google.svg" alt="">
+                </div>
+                <div class="font">Google</div>
+            </div>
+        </div>
+        <h3>Or Sign in using your email or mobile no.</h3>
+        <div id="input">
+            <div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i> 
+                </div>
+                <input type="email" name="" id="email" placeholder="Enter Your Email / Mobile">
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <input type="password" name="" id="password" placeholder="Enter Your Password">
+            </div>
+        </div>
+        <div class="check">
+            <input type="checkbox" name="" id="">
+            <p>Remember me</p>
+        </div>
+        <div id="forgot">
+            <div>Forgot Password?</div>
+            <div id="click">Login via OTP</div>
+        </div>
+        <button>Log in</button>
+        <div id="last_content">
+            <div>
+                One Network One Account
+            </div>
+            <div>
+                <img src="https://smedia2.intoday.in/aajtak/aajtakhd/images/aajtakHd_logo.png?bypass=true" alt="">
+            </div>
+            <div>
+                <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?576" alt="">
+            </div>
+            <div>
+                <img src="https://akm-img-a-in.tosshub.com/sites/btmt/businesstoday/resources/css/images/btnav-newlogo.png?size=48:21" alt="">
+            </div>
+        </div>
+        <div id="lastpara">
+            <p>Copyright © 2022 Living Media India Limited. For reprint rights: Syndications Today</p>
+        </div>
+    </div>
+</body>
+</html>         
+<script>
+    let storeData = JSON.parse(localStorage.getItem("signupdetails")) || [];
+    document.querySelector("button").addEventListener("click",myFUNCTION)
+
+    function myFUNCTION(){
+        storeData.forEach(function(elem){
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+
+        if(email === elem.email && password === elem.password){
+            alert("Sign up Successfull")
+        }else if(email === "" && password === ""){
+            alert("Please USE Registered ID or Password OR Sign up FIRST")
+        }else{
+            alert("Please Enter Correct Deails")
+        }
+    })
+    }
+    document.querySelector("#click").addEventListener("click",myDel)
+
+    function myDel(){
+        window.location.href="otp.html"
+    }
+    
+</script>

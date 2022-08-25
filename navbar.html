@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3c047ac03a.js" crossorigin="anonymous"></script>
+    <style>
+        #container{
+            width: 99vw;
+        }
+        #container nav li:first-child{
+            margin-left: 200px;
+            color:black;
+        }
+        #container nav{
+            margin-top: 0;
+        }
+        #container nav ul{
+            margin-top: 0;
+        }
+        #container nav li{
+            float: left;
+            list-style: none;
+            margin-right: 25px;
+            font-size: 15px;
+            color:gray;
+            cursor: pointer;
+        }
+        #container nav li:hover{
+            color:orange;
+        }
+        hr{
+            width: 100%;
+            margin-top: 10px;
+        }
+        #second{
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows: auto;
+            width: 50%;
+            margin-left: 350px;
+        }
+        #second>div{
+            border: 1px solid transparent; 
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color:gray;
+            cursor: pointer;
+        }
+        #second>div:hover{
+            color:orange;
+        }
+        #last{
+            background-color: #a00606;
+            width: 100%;
+            height: 40px;
+            display: grid;
+            grid-template-columns: 70% 20%;
+            grid-template-rows: auto;
+            margin-top: 10px;
+        }
+        #last>div{
+            border: 1px solid transparent;
+            display: flex;
+            height: 50%;
+        }
+        #last>div:first-child{
+            margin-left: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #last p{
+            border: 1px solid transparent ;
+            width: auto;
+            height: 30px;
+            margin-right: 20px;
+            font-size: 19px;
+            margin-top: 25px;
+            text-transform: capitalize;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+        #last p:hover{
+            color:orange;
+        }
+        #last i{
+            margin-right: 1px;
+            width: 40px;
+            height: auto;
+            margin-top: 8px;
+            color:white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #last i:first-child{
+            margin-left: 15px;
+        }
+        #last i:hover{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li>IndiaToday</li>
+                <li>Malyalam</li>
+                <li>IndiaTodayNE</li>
+                <li>Business Today</li>
+                <li>DailyO</li>
+                <li>Aaj Tak</li>
+                <li>Lallantop</li>
+                <li>Bangla</li>
+                <li>GNTTV</li>
+                <li>iChowk</li>
+                <li>Reader's Digest</li>
+            </ul>
+        </nav>
+        <br>
+        <hr>
+        <div id="second">
+            <div>NEWS</div>
+            <div>LIVE TV</div>
+            <div>
+                <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?v=1.52" alt="">
+            </div>
+            <div>APP</div>
+            <div>MAGZINE</div>
+        </div>
+        <div id="last">
+            <div>
+                <p>home</p>
+                <p>my feed</p>
+                <p>india</p>
+                <p>world</p>
+                <p>business</p>
+                <p>tech</p>
+                <p>movies</p>
+                <p>sports</p>
+                <p>science</p>
+                <p>best universities</p>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                
+                <div>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-tv"></i>
+                </div>
+                
+                <div>
+                    <a href="login.html"><i class="fa-solid fa-user-plus"></i></a> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
