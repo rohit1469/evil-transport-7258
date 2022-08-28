@@ -28,21 +28,28 @@
             color:gray;
             cursor: pointer;
         }
-        #container nav li:hover{
+
+        #container a{
+            color:grey;
+            text-transform: capitalize;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #container a:hover{
             color:orange;
         }
-        hr{
+        #hr{
             width: 100%;
             margin-top: 10px;
         }
-        #second{
+        #navsecond{
             display: grid;
             grid-template-columns: repeat(5,auto);
             grid-template-rows: auto;
             width: 50%;
             margin-left: 350px;
         }
-        #second>div{
+        #navsecond>div{
             border: 1px solid transparent; 
             font-size: 30px;
             display: flex;
@@ -51,10 +58,10 @@
             color:gray;
             cursor: pointer;
         }
-        #second>div:hover{
+        #navsecond>div:hover{
             color:orange;
         }
-        #last{
+        #navlast{
             background-color: #a00606;
             width: 100%;
             height: 40px;
@@ -63,18 +70,18 @@
             grid-template-rows: auto;
             margin-top: 10px;
         }
-        #last>div{
+        #navlast>div{
             border: 1px solid transparent;
             display: flex;
             height: 50%;
         }
-        #last>div:first-child{
+        #navlast>div:first-child{
             margin-left: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        #last p{
+        #navlast p{
             border: 1px solid transparent ;
             width: auto;
             height: 30px;
@@ -85,10 +92,10 @@
             color: whitesmoke;
             cursor: pointer;
         }
-        #last p:hover{
+        #navlast p:hover{
             color:orange;
         }
-        #last i{
+        #navlast i{
             margin-right: 1px;
             width: 40px;
             height: auto;
@@ -97,10 +104,10 @@
             font-size: 20px;
             cursor: pointer;
         }
-        #last i:first-child{
+        #navlast i:first-child{
             margin-left: 15px;
         }
-        #last i:hover{
+        #navlast i:hover{
             color:orange;
         }
     </style>
@@ -109,22 +116,22 @@
     <div id="container">
         <nav>
             <ul>
-                <li>IndiaToday</li>
-                <li>Malyalam</li>
-                <li>IndiaTodayNE</li>
-                <li>Business Today</li>
-                <li>DailyO</li>
-                <li>Aaj Tak</li>
-                <li>Lallantop</li>
-                <li>Bangla</li>
-                <li>GNTTV</li>
-                <li>iChowk</li>
-                <li>Reader's Digest</li>
+                <li><a href="https://www.indiatoday.in/">IndiaToday</a></li>
+                <li> <a href="https://malayalam.indiatoday.in/">Malyalam</a> </li>
+                <li> <a href="https://www.indiatodayne.in/">IndiaTodayNE</a> </li>
+                <li><a href="https://www.businesstoday.in/">Business Today</a> </li>
+                <li><a href="https://www.dailyo.in/">DailyO</a> </li>
+                <li><a href="https://www.aajtak.in/">Aaj Tak</a> </li>
+                <li><a href="https://www.thelallantop.com/">Lallantop</a> </li>
+                <li><a href=" https://bangla.aajtak.in/">Bangla</a> </li>
+                <li><a href="https://www.gnttv.com/">GNTTV</a> </li>
+                <li><a href="https://www.ichowk.in/">iChowk</a> </li>
+                <li><a href="https://www.readersdigest.in/">Reader's Digest</a> </li>
             </ul>
         </nav>
         <br>
-        <hr>
-        <div id="second">
+        <hr id="hr">
+        <div id="navsecond">
             <div>NEWS</div>
             <div>LIVE TV</div>
             <div>
@@ -133,29 +140,29 @@
             <div>APP</div>
             <div>MAGZINE</div>
         </div>
-        <div id="last">
+        <div id="navlast">
             <div>
-                <p>home</p>
-                <p>my feed</p>
-                <p>india</p>
-                <p>world</p>
-                <p>business</p>
-                <p>tech</p>
-                <p>movies</p>
-                <p>sports</p>
-                <p>science</p>
-                <p>best universities</p>
+                <p id="pone">home</p>
+                <p id="ptwo">my feed</p>
+                <p id="pthree">india</p>
+                <p id="pfour">world</p>
+                <p id="pfive">business</p>
+                <p id="psix">tech</p>
+                <p id="pseven">movies</p>
+                <p id="peight">sports</p>
+                <p id="pnine">science</p>
+                <p id="pten">best universities</p>
             </div>
             <div>
                 <div>
                     <i class="fa-solid fa-list"></i>
                 </div>
                 <div>
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                   <a href="https://www.indiatoday.in/interactive/cryptocurrency-price-in-india-bitcoin-ethereum-dogecoin-ripple-litecoin/"><i class="fa-solid fa-magnifying-glass"></i></a> 
                 </div>
                 
                 <div>
-                    <i class="fa-solid fa-share-nodes"></i>
+                  <a href="https://www.indiatoday.in/livetv"><i class="fa-solid fa-share-nodes"></i></a>  
                 </div>
                 <div>
                     <i class="fa-solid fa-tv"></i>
@@ -168,5 +175,52 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>
+
+<script>
+    document.querySelector("#pone").addEventListener("click",myLocal1)
+    document.querySelector("#ptwo").addEventListener("click",myLocal2)
+    document.querySelector("#pthree").addEventListener("click",myLocal3)
+    document.querySelector("#pfour").addEventListener("click",myLocal4)
+    document.querySelector("#pfive").addEventListener("click",myLocal5)
+    document.querySelector("#psix").addEventListener("click",myLocal6)
+    document.querySelector("#pseven").addEventListener("click",myLocal7)
+    document.querySelector("#peight").addEventListener("click",myLocal8)
+    document.querySelector("#pnine").addEventListener("click",myLocal9)
+    document.querySelector("#pten").addEventListener("click",myLocal10)
+
+
+    function myLocal1(){
+        window.location.href="https://www.indiatoday.in/"
+    }
+    function myLocal2(){
+        window.location.href="https://www.indiatoday.in/foryou"
+    }
+    function myLocal3(){
+        window.location.href="https://www.indiatoday.in/india"
+    }
+    function myLocal4(){
+        window.location.href="https://www.indiatoday.in/world"
+    }
+    function myLocal5(){
+        window.location.href="https://www.indiatoday.in/business"
+    }
+    function myLocal6(){
+        window.location.href="https://www.indiatoday.in/technology"
+    }
+    function myLocal7(){
+        window.location.href="https://www.indiatoday.in/movies"
+    }
+    function myLocal8(){
+        window.location.href="https://www.indiatoday.in/sports"
+    }
+    function myLocal9(){
+        window.location.href="https://www.indiatoday.in/science"
+    }
+    function myLocal10(){
+        window.location.href="https://www.indiatoday.in/best-universities/"
+    }
+
+</script>

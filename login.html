@@ -273,10 +273,10 @@
     <div id="back">
         <div>
             <div>
-               <a href="navbar.html"><i class="fa-solid fa-arrow-left"></i></a> 
+               <a href="homepage.html"><i class="fa-solid fa-arrow-left"></i></a> 
             </div>
             <div>
-              <a href="navbar.html">  Back to India Today</a>
+              <a href="homepage.html">  Back to India Today</a>
             </div>
         </div>
         <div>
@@ -363,10 +363,11 @@
 
         if(email === elem.email && password === elem.password){
             alert("Sign up Successfull")
+            window.location.href="homepage.html"
         }else if(email === "" && password === ""){
-            alert("Please USE Registered ID or Password OR Sign up FIRST")
+            alert("Please use Registered ID or Password OR Sign up FIRST")
         }else{
-            alert("Please Enter Correct Deails")
+            alert("Please Enter Correct Details")
         }
     })
     }

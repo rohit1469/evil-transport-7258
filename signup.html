@@ -340,6 +340,11 @@
 </html>
 
 <script>
+    let a = confirm("Are you Sign up Already, if YES please Press OK ")
+    if(a === true){
+        window.location.href="login.html"
+    }
+    
     document.querySelector("form").addEventListener("submit",myFun)
     let arr = JSON.parse(localStorage.getItem("signupdetails")) || [];
     function myFun(){
