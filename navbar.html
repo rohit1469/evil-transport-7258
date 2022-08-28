@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3c047ac03a.js" crossorigin="anonymous"></script>
+    <style>
+        #container{
+            width: 99vw;
+        }
+        #container nav li:first-child{
+            margin-left: 200px;
+            color:black;
+        }
+        #container nav{
+            margin-top: 0;
+        }
+        #container nav ul{
+            margin-top: 0;
+        }
+        #container nav li{
+            float: left;
+            list-style: none;
+            margin-right: 25px;
+            font-size: 15px;
+            color:gray;
+            cursor: pointer;
+        }
+
+        #container a{
+            color:grey;
+            text-transform: capitalize;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #container a:hover{
+            color:orange;
+        }
+        #hr{
+            width: 100%;
+            margin-top: 10px;
+        }
+        #navsecond{
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            grid-template-rows: auto;
+            width: 50%;
+            margin-left: 350px;
+        }
+        #navsecond>div{
+            border: 1px solid transparent; 
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color:gray;
+            cursor: pointer;
+        }
+        #navsecond>div:hover{
+            color:orange;
+        }
+        #navlast{
+            background-color: #a00606;
+            width: 100%;
+            height: 40px;
+            display: grid;
+            grid-template-columns: 70% 20%;
+            grid-template-rows: auto;
+            margin-top: 10px;
+        }
+        #navlast>div{
+            border: 1px solid transparent;
+            display: flex;
+            height: 50%;
+        }
+        #navlast>div:first-child{
+            margin-left: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #navlast p{
+            border: 1px solid transparent ;
+            width: auto;
+            height: 30px;
+            margin-right: 20px;
+            font-size: 19px;
+            margin-top: 25px;
+            text-transform: capitalize;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+        #navlast p:hover{
+            color:orange;
+        }
+        #navlast i{
+            margin-right: 1px;
+            width: 40px;
+            height: auto;
+            margin-top: 8px;
+            color:white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #navlast i:first-child{
+            margin-left: 15px;
+        }
+        #navlast i:hover{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="https://www.indiatoday.in/">IndiaToday</a></li>
+                <li> <a href="https://malayalam.indiatoday.in/">Malyalam</a> </li>
+                <li> <a href="https://www.indiatodayne.in/">IndiaTodayNE</a> </li>
+                <li><a href="https://www.businesstoday.in/">Business Today</a> </li>
+                <li><a href="https://www.dailyo.in/">DailyO</a> </li>
+                <li><a href="https://www.aajtak.in/">Aaj Tak</a> </li>
+                <li><a href="https://www.thelallantop.com/">Lallantop</a> </li>
+                <li><a href=" https://bangla.aajtak.in/">Bangla</a> </li>
+                <li><a href="https://www.gnttv.com/">GNTTV</a> </li>
+                <li><a href="https://www.ichowk.in/">iChowk</a> </li>
+                <li><a href="https://www.readersdigest.in/">Reader's Digest</a> </li>
+            </ul>
+        </nav>
+        <br>
+        <hr id="hr">
+        <div id="navsecond">
+            <div>NEWS</div>
+            <div>LIVE TV</div>
+            <div>
+                <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?v=1.52" alt="">
+            </div>
+            <div>APP</div>
+            <div>MAGZINE</div>
+        </div>
+        <div id="navlast">
+            <div>
+                <p id="pone">home</p>
+                <p id="ptwo">my feed</p>
+                <p id="pthree">india</p>
+                <p id="pfour">world</p>
+                <p id="pfive">business</p>
+                <p id="psix">tech</p>
+                <p id="pseven">movies</p>
+                <p id="peight">sports</p>
+                <p id="pnine">science</p>
+                <p id="pten">best universities</p>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <div>
+                   <a href="https://www.indiatoday.in/interactive/cryptocurrency-price-in-india-bitcoin-ethereum-dogecoin-ripple-litecoin/"><i class="fa-solid fa-magnifying-glass"></i></a> 
+                </div>
+                
+                <div>
+                  <a href="https://www.indiatoday.in/livetv"><i class="fa-solid fa-share-nodes"></i></a>  
+                </div>
+                <div>
+                    <i class="fa-solid fa-tv"></i>
+                </div>
+                
+                <div>
+                    <a href="login.html"><i class="fa-solid fa-user-plus"></i></a> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("#pone").addEventListener("click",myLocal1)
+    document.querySelector("#ptwo").addEventListener("click",myLocal2)
+    document.querySelector("#pthree").addEventListener("click",myLocal3)
+    document.querySelector("#pfour").addEventListener("click",myLocal4)
+    document.querySelector("#pfive").addEventListener("click",myLocal5)
+    document.querySelector("#psix").addEventListener("click",myLocal6)
+    document.querySelector("#pseven").addEventListener("click",myLocal7)
+    document.querySelector("#peight").addEventListener("click",myLocal8)
+    document.querySelector("#pnine").addEventListener("click",myLocal9)
+    document.querySelector("#pten").addEventListener("click",myLocal10)
+
+
+    function myLocal1(){
+        window.location.href="https://www.indiatoday.in/"
+    }
+    function myLocal2(){
+        window.location.href="https://www.indiatoday.in/foryou"
+    }
+    function myLocal3(){
+        window.location.href="https://www.indiatoday.in/india"
+    }
+    function myLocal4(){
+        window.location.href="https://www.indiatoday.in/world"
+    }
+    function myLocal5(){
+        window.location.href="https://www.indiatoday.in/business"
+    }
+    function myLocal6(){
+        window.location.href="https://www.indiatoday.in/technology"
+    }
+    function myLocal7(){
+        window.location.href="https://www.indiatoday.in/movies"
+    }
+    function myLocal8(){
+        window.location.href="https://www.indiatoday.in/sports"
+    }
+    function myLocal9(){
+        window.location.href="https://www.indiatoday.in/science"
+    }
+    function myLocal10(){
+        window.location.href="https://www.indiatoday.in/best-universities/"
+    }
+
+</script>

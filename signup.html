@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <style>
+        #back{
+            background-color: #151515;
+            width: 99vw;
+            height: 50px;
+            display: flex;
+        }
+        #back>div:first-child{
+            border: 1px solid transparent;
+            width: 400px;
+            margin-left: 150px;
+            height: 48px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #back>div:first-child>div:last-child{
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #back i{
+            margin-right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        #back>div:nth-child(2){
+            margin-left: 750px;
+            margin-top: -10px;
+        }
+        #back a{
+            color:grey;
+            text-decoration: none;
+        }
+        div+h4{
+            max-width: 100%;
+            text-align: center;
+            margin:20px auto;
+            position: relative;
+            font-size: 20px;
+            color:grey;
+        }
+        h4:before{
+            position: absolute;
+            width:250px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            left: 490px;
+        }
+        h4::after{
+            position: absolute;
+            width:250px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            right: 490px;
+        }
+        #pics{
+            border: 1px solid transparent;
+            width: 600px;
+            height: 50px;
+            margin:10px auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            justify-content: space-between;
+            gap:20px;
+        }
+        #pics>div{
+            border:1px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #pics i{
+            margin-right: 20px;
+            font-size: 30px;
+            margin-left: -30px;
+        }
+        .font{
+            font-size: 20px;
+        }
+        #pics>div:first-child{
+            background-color: #1daee3;
+            color:white;
+        }
+        #pics>div:nth-child(2){
+            background-color: #3b5998;
+            color:white;
+        }
+        #pics>div:nth-child(3){
+            background-color:#f1f1f1 ;
+            color:black;
+        }
+        #pics img{
+            margin-right: 10px;
+            margin-left: -20px;
+        }
+        .h1{
+            width: 100%;
+            text-align: center;
+            margin-top: 0;
+        }
+        .h3{
+            max-width: 100%;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            font-size: 20px;
+            color:grey;
+        }
+        .h3:before{
+            position: absolute;
+            width:125px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            left: 490px;
+        }
+        .h3::after{
+            position: absolute;
+            width:125px;
+            height: 1px;
+            background: grey;
+            content: "";
+            display: block;
+            top:50%;
+            right: 490px;
+        }
+        form{
+            border: 1px solid transparent;
+            width: 40%;
+            margin: auto;
+        }
+        form select{
+            padding:10px 136px 10px 10px; 
+            margin-top:20px ;
+        }
+        form select+input{
+            padding:10px 110px 10px 10px;
+            margin-left: 70px;
+        }
+        form select+input+input{
+            padding:12px 70px 12px 10px;
+            margin-left: 0;
+            margin-top: 30px;
+        }
+        form select+input+input+input{
+            padding:10px 110px 10px 10px;
+            margin-left: 70px;
+        }
+
+        form .checkbox{
+            display: inline;
+            margin-left: 0;
+            margin-top: 12px;
+            position: relative;
+            top: 4px;
+        }
+        form p{
+            margin-left: 20px;
+            margin-top: -16px;
+        }
+        form input:last-child{
+            padding:8px 70px;
+            margin-left: 210px;
+            font-size: 17px;
+            background-color:#1d61cc;
+            color:white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        #forgot{
+            width: 43%;
+            margin: auto;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }   
+        #forgot>div{
+            border: 1px solid transparent;
+            width: 190px;
+            font-size: 15px;
+            color:teal;
+            font-weight: bold ;
+            cursor: pointer;
+        }
+        #forgot>div:first-child{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #forgot>div:last-child{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #forgot>div:nth-child(2){
+            display: flex;
+        }
+        #last_content{
+            border: 1px solid transparent;
+            width: 40%;
+            margin:10px auto;
+            height: 60px;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+        #last_content>div{
+            border: 1px solid transparent;
+            margin-right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 60%;
+            margin-top: 15px;
+        }
+        #last_content>div:first-child{
+            margin-right:15px;
+            margin-left: 100px;
+            border: none;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #last_content img{
+            width: 60px;
+        }
+        #last_content>div:last-child img{
+            width: 40px;
+            padding-left:10px;
+            padding-right:10px ;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/3c047ac03a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="back">
+        <div>
+            <div>
+               <a href="navbar.html"><i class="fa-solid fa-arrow-left"></i></a> 
+            </div>
+            <div>
+              <a href="navbar.html">  Back to India Today</a>
+            </div>
+        </div>
+        <div>
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="">
+        </div>
+    </div>
+    <h4>Sign up By</h4>
+    <div id="pics">
+        <div>
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="font">Twitter</div>
+        </div>
+        <div>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="font">Facebook</div>
+        </div>
+        <div>
+            <div>
+                <img src="https://sso.masaischool.com/google.svg" alt="">
+            </div>
+            <div class="font">Google</div>
+        </div>
+    </div>
+    <h2 class="h1">OR</h2>
+    <h3 class="h3">Sign up using your Email / Mobile No.</h3>
+    <form action="" >
+    <select name="" id="select" required>
+        <option value="">Enter Country</option>
+        <option value="">India</option>
+        <option value="">Australia</option>
+        <option value="">America</option>
+        <option value="">Canada</option>
+        <option value="">Ireland</option>
+        <option value="">Sri Lanka</option>
+        <option value="">England</option>
+        <option value="">London</option>
+        <option value="">UK</option>
+        <option value="">Russia</option>
+    </select>
+    <input type="text" name="" id="name" placeholder="Enter Your Full Name" required>
+    <input type="email" name="" id="email" placeholder="Enter Your Email Here" required>
+
+    <input type="password" name="" id="password" placeholder="Enter Password" required>
+
+    <input type="checkbox" name="thor" id="check" class="checkbox"required>
+    <p>I agree to the <a href="" style="color:blue;text-decoration:none;display: inline;"> SSO login privacy terms </a> and I warrant that I am above 16 years of age. </p>
+    <input type="checkbox" name="" id="check1"required class="checkbox">
+    <p>I agree to the processing of my personal information for profiling such as My Credits, Follow activity , Personalised recommendations and Advertisements.</p>
+    <input type="checkbox" name="" id="check2" class="checkbox" required>
+    <p>I wish to receive custom communications i.e. Emails, newsletters, SMS, notifications from India Today based on my interests and my activities on the website.</p>
+    <input type="submit" value="Sign up">
+</form>
+<div id="forgot">
+    <div>
+        <p style="color:red;margin-right: 5px;">*</p> Mandatory Fields</div>
+    <div>Already registered? <a href="login.html" style="color:red;cursor: pointer;text-decoration: none;"> Sign in » </a></div>
+</div>
+<div id="last_content">
+    <div>
+        One Network One Account
+    </div>
+    <div>
+        <img src="https://smedia2.intoday.in/aajtak/aajtakhd/images/aajtakHd_logo.png?bypass=true" alt="">
+    </div>
+    <div>
+        <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?576" alt="">
+    </div>
+    <div>
+        <img src="https://akm-img-a-in.tosshub.com/sites/btmt/businesstoday/resources/css/images/btnav-newlogo.png?size=48:21" alt="">
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    let a = confirm("Are you Sign up Already, if YES please Press OK ")
+    if(a === true){
+        window.location.href="login.html"
+    }
+    
+    document.querySelector("form").addEventListener("submit",myFun)
+    let arr = JSON.parse(localStorage.getItem("signupdetails")) || [];
+    function myFun(){
+        event.preventDefault()
+        let country = document.querySelector("#select").value;
+        let name = document.querySelector("#name").value;
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+
+        let obj = {
+            country,
+            name,
+            email,
+            password
+        }
+        arr.push(obj)
+        localStorage.setItem("signupdetails",JSON.stringify(arr))
+        alert("OTP Sent")
+        window.location.href="otp.html" 
+    }
+       
+</script>
